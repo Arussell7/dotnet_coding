@@ -1,0 +1,41 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\GitHubRepos\\dotnet_coding\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\dotnet_coding.bundle.scp.css",
+      "PackagePath": "staticwebassets\\dotnet_coding.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\GitHubRepos\\dotnet_coding\\wwwroot\\app.css",
+      "PackagePath": "staticwebassets\\app.css"
+    },
+    {
+      "Id": "C:\\GitHubRepos\\dotnet_coding\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\GitHubRepos\\dotnet_coding\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\GitHubRepos\\dotnet_coding\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.dotnet_coding.props",
+      "PackagePath": "build\\dotnet_coding.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.dotnet_coding.props",
+      "PackagePath": "buildMultiTargeting\\dotnet_coding.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.dotnet_coding.props",
+      "PackagePath": "buildTransitive\\dotnet_coding.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.dotnet_coding.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

@@ -1,0 +1,80 @@
+@page "/oneWayDataBinding"
+
+<PageTitle>One Way Data Binding Example</PageTitle>
+<h1>One Way Data Binding</h1>
+@foreach(Car car in cars){
+    <p>
+        Car: @car.Make @car1.Model
+    </p>
+    <p>
+        Price: £@car.Price
+    </p>
+    @if(car.TopSpeed != null){
+        <p>
+            Top Speed: @car.TopSpeed
+        </p>
+    }
+    <p>
+        Available Locations:
+    </p>
+    @foreach(Location location in car.Locations){
+        if(location.Available == true){
+            <p>
+                @location.Name , @location.City , @location.Country
+            </p>
+        }
+    }
+}
+
+@code{
+        Car car1 = new Car();
+        Car car2 = new Car();
+        List<Car> cars = new List<Car>();
+        protected override void OnInitialized()
+        {
+            base.OnInitialized();
+
+            car1 = new Car{
+                Make = "Ford",
+                Model = "Fiesta",
+                Price = 8760.00,
+                Locations = new List<Location>{
+                new Location{ Id=1, Name="Andy's Autos", City="Liverpool", Country="UK", Available = true},
+                new Location{ Id=2, Name="Caroline's Cars", City="Birmingham", Country="UK", Available = false},
+                new Location{ Id=3, Name="Vinny's Vehicles", City="London", Country="UK", Available = true}
+                },
+            };
+
+            car2 = new Car{
+                Make = "Vauxhall",
+                Model = "Astra",
+                Price = 12050.00,
+                TopSpeed = 120,
+                Locations = new List<Location>{
+                new Location{ Id=1, Name="Andy's Autos", City="Liverpool", Country="UK", Available = false},
+                new Location{ Id=2, Name="Caroline's Cars", City="Birmingham", Country="UK", Available = true},
+                new Location{ Id=3, Name="Vinny's Vehicles", City="London", Country="UK", Available = false}
+                },
+            };
+            cars.Add(car1);
+            cars.Add(car2);
+        }
+
+        class Car
+        {
+            public string Make { get; set; }
+            public string Model { get; set; }
+            public int? TopSpeed { get; set; }
+            public double Price { get; set; }
+            public List<Location>? Locations;
+        }
+
+        class Location
+        {
+            public required int Id { get; set; }
+            public required string Name { get; set; }
+            public required string City { get; set; }
+            public required string Country { get; set; }
+            public required Boolean Available { get; set; }
+        }
+}
